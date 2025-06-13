@@ -1,0 +1,70 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+
+  .modalWindow {
+    width: 25%;
+    height: 135px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #fff;
+    color: #000;
+    margin-top: 200px;
+    padding: 24px;
+    border-radius: 8px;
+    position: relative;
+
+    .modalTitle {
+      margin-top: 10px;
+    }
+
+    .buttonGroup {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 20px;
+
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 140px;
+        border: 1px solid #d3d3d3;
+        transition: border 0.2s ease-in-out, color 0.2s ease-in-out;
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 8px 0;
+        cursor: pointer;
+
+        &:hover {
+          border: 1px solid #fb773f;
+        }
+      }
+    }
+
+    .close {
+      position: absolute;
+      right: 7px;
+      top: 7px;
+      background: #fff;
+      border: 1px solid #fff;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 15px;
+      font-weight: 400;
+      transition: border 0.2s ease-in-out;
+      color: #b3b3b3;
+
+      &:hover {
+        border: 1px solid #fb773f;
+      }
+    }
+  }
+}
