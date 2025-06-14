@@ -79,6 +79,7 @@ export const Orders = () => {
                       <Card
                         key={product.id}
                         {...product}
+                        id={product.customId}
                         setIdSingleProduct={setIdSingleProduct}
                       />
                     );

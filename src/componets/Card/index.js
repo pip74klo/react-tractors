@@ -66,7 +66,7 @@ const Card = ({
           <div
             className={styles.favorite}
             onClick={onClickFavorites} >
-            {onFavorite && <img src={isFavoritesAdded(id) ? "/img/heart-liked.svg" : "/img/heart-unliked.svg"} alt="Unliked" />}
+            {onFavorite && <img width={36} height={36} src={isFavoritesAdded(id) ? "/img/heart-liked.svg" : "/img/heart-unliked.svg"} alt="Unliked" />}
           </div>
           <Link to={`/item/${id}`}>
             <img
@@ -77,7 +77,7 @@ const Card = ({
               width={150}
               height={120}
               src={imageUrl}
-              alt="Sneakers" />
+              alt="Tractors" />
             <h5
               onClick={() => {
                 setIdSingleProduct(id)
@@ -85,7 +85,7 @@ const Card = ({
               }}>
               {name}
             </h5></Link>
-          <div className="d-flex justify-between align-center">
+          <div className={styles.cartBtn}>
             <div className="d-flex flex-column">
               <span>Цена:</span>
               <b>{price.toLocaleString("ru-RU")} руб.</b>
@@ -93,7 +93,7 @@ const Card = ({
             <div
               className={styles.added}
               onClick={onClickAdd}>
-              {onPlus && <img width={32} height={32} src={isItemAdded(id) ? "/img/btn-cheked.svg" : "/img/btn-plus.svg"} alt="Plus" />}
+              {onPlus && <img width={50} height={32} src={isItemAdded(id) ? "/img/btn-cart-checked.svg" : "/img/btn-cart.svg"} alt="Plus" />}
 
             </div>
           </div></>

@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { AppContext } from "../context/AppContext";
 
 import Card from "../componets/Card";
+import { Info } from "../Info";
 
 export const Home = () => {
   const {
@@ -24,13 +25,13 @@ export const Home = () => {
 
   return (
     <div className="content p-40 clear">
-      <div className="d-flex align-center mb-40 justify-between">
+      <div className="contentSearch">
         {searchInputValue ? (
           <h1>Поиск по "{searchInputValue}"</h1>
         ) : (
-          <h1>Тракторы</h1>
+          <h1>Техника</h1>
         )}
-        <div className="search-block d-flex">
+        <div className="searchBlock">
           <img src="/img/search.svg" alt="Search" />
           <input
             value={searchInputValue}
@@ -58,6 +59,16 @@ export const Home = () => {
           );
         })}
       </div>
+      {filteredItems.length === 0 && (
+        <div className="searchNothing">
+          <Info
+            image={"/img/empty-cart.jpeg"}
+            classGreenText={"greenText"}
+            title={"Ничего не найдено"}
+            description={"Попробуйте изменить параметры поиска"}
+          />
+        </div>
+      )}
     </div>
   );
 };

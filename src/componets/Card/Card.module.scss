@@ -13,14 +13,16 @@
     transform: translateY(-5px);
   }
 
-  img {
-    cursor: pointer;
+  .cartBtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .favorite {
     position: absolute;
     top: 20px;
-    right: 20px;
+    right: 17px;
     cursor: pointer;
 
     img {
@@ -38,6 +40,9 @@
 
   .added {
     cursor: pointer;
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
 
     img {
       border: 2px solid transparent;
@@ -46,7 +51,7 @@
     }
 
     img:hover {
-      border: 2px solid #70c27f;
+      border: 2px solid #ef7c37;
       border-radius: 7px;
     }
   }

@@ -131,8 +131,8 @@ const View = ({ data }) => {
                     onClick={onClickAdd}
                     src={
                       isItemAdded(data.id)
-                        ? "/img/btn-cheked.svg"
-                        : "/img/btn-plus.svg"
+                        ? "/img/btn-cart-checked.svg"
+                        : "/img/btn-cart.svg"
                     }
                     alt="Plus"
                   />
@@ -142,8 +142,8 @@ const View = ({ data }) => {
                     onClick={onClickFavorite}
                     src={
                       isFavoritesAdded(data.id)
-                        ? "/img/heart-liked.svg"
-                        : "/img/heart-unliked.svg"
+                        ? "/img/heart-liked-big.svg"
+                        : "/img/heart-unliked-big.svg"
                     }
                     alt="Unliked"
                   />
